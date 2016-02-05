@@ -10,7 +10,13 @@
 <div class="row marketing">
   <h4>HTML5 Boilerplate</h4>
   <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+    <!-- Passing a data object to the translation by the filter -->
+    HTML5 {{'BOILER' | translate: language}} is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+
+<!-- Passing a data object to the translation by the directive. The best option -->
+<p translate="BOILER" translate-values="{{language}}">
   </p>
 
   <h4>Angular</h4>
@@ -18,8 +24,12 @@
     AngularJS is a toolset for building the framework most suited to your application development.
   </p>
 
-  <h2 id="{{headline}}"> test translate:{{headline}}</h2>
-  <p>test headline {{ 'HEADLINE' | translate }}</p>
+  <!-- Translation by a filter -->
+  <h2 id="{{headline}}">{{headline}}</h2>
+
+  <!-- Translation by a filter -->
+  <p>{{ 'BOILER' | translate }}</p>
+
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
 </div>

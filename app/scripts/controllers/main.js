@@ -1,6 +1,3 @@
-
-
-
 'use strict';
 
 /**
@@ -13,25 +10,25 @@
 angular.module('internacionalizacionAngularApp')
   .controller('MainCtrl', function ($scope, $translate) {
 
-    /*var translations = {
-      HEADLINE: 'What an awesome module!',
-      PARAGRAPH: 'Srsly!',
-      NAMESPACE: {
-        PARAGRAPH: 'And it comes with awesome features!'
-      }
-    };*/
-    
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-
  
     $translate('HEADLINE').then(function (headline) {
       $scope.headline = headline;
     });
 
-    console.log('$scope.headline', $scope.headline);
+    $scope.tlData = {
+      staticValue : 1000,
+      randomValue : Math.floor(Math.random() * 1000)
+    };
+
+    $scope.language = {
+      es: "spanish",
+      en: "english",
+      de: "german"
+    };
 
   });
